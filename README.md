@@ -42,13 +42,13 @@ By predicting the probability of a crash in real time, the system provides a cri
   High frequency cryptocurrency dataset containing engineered price features and binary crash labels.  
   Ensure this file is placed in the root directory before execution.
 
-- `step1_preprocess.py`  
+- `prepare_sequences.py`  
   Data preprocessing pipeline.  
   - Applies MinMaxScaler  
   - Generates 3D sequential arrays  
   - Saves `X.npy`, `y.npy`, and `scaler.pkl`
 
-- `model.ipynb`  
+- `train_model.ipynb`  
   Main Jupyter Notebook for:
   - Model training  
   - Evaluation  
@@ -67,8 +67,8 @@ By predicting the probability of a crash in real time, the system provides a cri
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Your-Username/Your-Repo-Name.git
-cd Your-Repo-Name
+git clone https://github.com/Godar72/Flash-Crash-Predictor.git
+cd Flash-Crash-Predictor
 ```
 
 ### 2. Install Required Dependencies
@@ -88,7 +88,7 @@ The pipeline runs in two stages.
 Convert raw CSV data into sequential arrays.
 
 ```bash
-python step1_preprocess.py
+python prepare_sequences.py
 ```
 
 Output files generated:
@@ -106,7 +106,7 @@ The script uses a sliding window approach. It feeds the previous 500 price ticks
 Open the Jupyter Notebook.
 
 ```bash
-jupyter notebook model.ipynb
+jupyter notebook train_model.ipynb
 ```
 
 Run all cells. The notebook will:
